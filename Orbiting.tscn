@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4am36t2t832p"]
+
+[ext_resource type="Texture2D" uid="uid://dn4wyqq2epohd" path="res://sun.png" id="1_uaw68"]
+[ext_resource type="Script" path="res://Rotate.gd" id="2_o3r5h"]
+[ext_resource type="Texture2D" uid="uid://cv7la4lhckjgm" path="res://mercury.png" id="3_avgix"]
+[ext_resource type="Texture2D" uid="uid://b7rimc6wxnta8" path="res://venus.png" id="4_gti1n"]
+[ext_resource type="Texture2D" uid="uid://b13lt1knh44tw" path="res://earth.png" id="5_bj7bd"]
+[ext_resource type="Texture2D" uid="uid://d1liwvasn8e10" path="res://mars.png" id="6_npvay"]
+[ext_resource type="Texture2D" uid="uid://r3320iwer5ik" path="res://moon.png" id="7_2l0gl"]
+[ext_resource type="Texture2D" uid="uid://ccuy1ptrml0ie" path="res://jupiter.png" id="7_idy6w"]
+[ext_resource type="Texture2D" uid="uid://b2ohnnqy6bvfy" path="res://saturn.png" id="8_2x74s"]
+[ext_resource type="Texture2D" uid="uid://26qmft5614ko" path="res://eris.png" id="9_6mfoj"]
+[ext_resource type="Texture2D" uid="uid://3tbjtthh5ega" path="res://uranus.png" id="9_uxhhg"]
+[ext_resource type="Texture2D" uid="uid://dux7n6ewrub1j" path="res://neptune.png" id="10_als7r"]
+[ext_resource type="Texture2D" uid="uid://djwkqgyke2sfd" path="res://pluto.png" id="11_b4w6v"]
+[ext_resource type="Texture2D" uid="uid://dfq0nfxlhojdv" path="res://outerspace.jpeg" id="13_48p4f"]
+
+[node name="Sun" type="Sprite2D"]
+position = Vector2(1424.5, 724.5)
+scale = Vector2(0.274, 0.269)
+texture = ExtResource("1_uaw68")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.01
+
+[node name="Saturn" type="Sprite2D" parent="Node2D"]
+position = Vector2(2474.84, -2154.86)
+texture = ExtResource("8_2x74s")
+
+[node name="Node2D2" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.025
+
+[node name="Mercury" type="Sprite2D" parent="Node2D2"]
+position = Vector2(449.032, -334.286)
+texture = ExtResource("3_avgix")
+
+[node name="Node2D3" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.015
+
+[node name="Mars" type="Sprite2D" parent="Node2D3"]
+position = Vector2(1723.87, -1450.29)
+texture = ExtResource("6_npvay")
+
+[node name="Node2D4" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.027
+
+[node name="Venus" type="Sprite2D" parent="Node2D4"]
+position = Vector2(792.258, -668.571)
+texture = ExtResource("4_gti1n")
+
+[node name="Node2D5" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.003
+
+[node name="Jupiter" type="Sprite2D" parent="Node2D5"]
+position = Vector2(2064.52, -1787.14)
+texture = ExtResource("7_idy6w")
+
+[node name="Node2D6" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.003
+
+[node name="Uranus" type="Sprite2D" parent="Node2D6"]
+position = Vector2(2934.19, -2512.29)
+texture = ExtResource("9_uxhhg")
+
+[node name="Node2D" type="Node2D" parent="Node2D6/Uranus"]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.05
+
+[node name="Moon2" type="Sprite2D" parent="Node2D6/Uranus/Node2D"]
+position = Vector2(190.314, 146.331)
+scale = Vector2(0.207025, 0.187051)
+texture = ExtResource("9_6mfoj")
+
+[node name="Node2D7" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.004
+
+[node name="Neptune" type="Sprite2D" parent="Node2D7"]
+position = Vector2(3280, -2820.86)
+texture = ExtResource("10_als7r")
+
+[node name="Node2D8" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.005
+
+[node name="Earth" type="Sprite2D" parent="Node2D8"]
+position = Vector2(1179.35, -972)
+texture = ExtResource("5_bj7bd")
+
+[node name="Node2D" type="Node2D" parent="Node2D8/Earth"]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.02
+
+[node name="Moon" type="Sprite2D" parent="Node2D8/Earth/Node2D"]
+position = Vector2(209.032, -216)
+scale = Vector2(0.479167, 0.455556)
+texture = ExtResource("7_2l0gl")
+
+[node name="Node2D9" type="Node2D" parent="."]
+script = ExtResource("2_o3r5h")
+rotation_speed = 0.006
+
+[node name="Pluto" type="Sprite2D" parent="Node2D9"]
+position = Vector2(-3892.34, 2544.61)
+texture = ExtResource("11_b4w6v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_left = -5407.0
+offset_top = -2801.0
+offset_right = 9608.0
+offset_bottom = 12344.0
+texture = ExtResource("13_48p4f")
